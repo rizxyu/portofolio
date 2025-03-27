@@ -1,4 +1,4 @@
-import { project, school, gallery } from './content.js';
+import { project, school, skill, gallery } from './content.js';
 
 export default function pages() {
     return `
@@ -26,7 +26,7 @@ export default function pages() {
     Skill
   </label>
   <div class="tab-content bg-base-100 border-base-300 p-6 w-full overflow-x-auto">
-   None.
+    ${skill()}
   </div>
   <label class="tab flex items-center gap-2">
     <input type="radio" name="my_tabs_4" />
