@@ -123,33 +123,26 @@ export function school() {
 
 export function gallery() {
   return `
-  <div class="w-full max-w-4xl mx-auto">
-    <h3 class="p-4 pb-2 text-sm opacity-80 tracking-wide uppercase border-b border-base-300">
+  <div class="w-full max-w-4xl mx-auto text-center">
+    <h3 class="p-4 pb-2 text-sm font-bold opacity-80 tracking-wide uppercase border-b border-base-300">
       Manhwa Favorit Gw
     </h3>
-    <div class="carousel rounded-box w-96">
-      <div class="carousel-item w-1/2">
-        <picture>
-          <source srcset="/galeri/manhwa/solo-leveling.jpg" type="image/webp">
-          <img src="/galeri/manhwa/solo-leveling.jpg" class="rounded-xl w-full" alt="Solo Leveling" />
-        </picture>
+
+    <div class="carousel w-full max-w-md mx-auto mt-4 space-x-4">
+      <div class="carousel-item w-3/4 md:w-1/2 flex justify-center">
+        <img src="/galeri/manhwa/solo-leveling.jpg" class="rounded-xl shadow-lg hover:scale-105 transition-transform" />
       </div>
-      <div class="carousel-item w-1/2">
-        <picture>
-          <source srcset="/galeri/manhwa/TRDCH.jpg" type="image/webp">
-          <img src="/galeri/manhwa/TRDCH.jpg" class="rounded-xl w-full" alt="TRDCH" />
-        </picture>
+      <div class="carousel-item w-3/4 md:w-1/2 flex justify-center">
+        <img src="/galeri/manhwa/TRDCH.jpg" class="rounded-xl shadow-lg hover:scale-105 transition-transform" />
       </div>
-      <div class="carousel-item w-1/2">
-        <picture>
-          <source srcset="/galeri/manhwa/FTBLBV.webp" type="image/webp">
-          <img src="/galeri/manhwa/FTBLBV.jpg" class="rounded-xl w-full" alt="FTBLBV" />
-        </picture>
+      <div class="carousel-item w-3/4 md:w-1/2 flex justify-center">
+        <img src="/galeri/manhwa/FTBLBV.webp" class="rounded-xl shadow-lg hover:scale-105 transition-transform" />
       </div>
     </div>
   </div>
   `;
 }
+
 
 
 export function skill(){
