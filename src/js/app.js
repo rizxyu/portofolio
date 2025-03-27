@@ -4,15 +4,15 @@ import pages from './page.js';
 import 'remixicon/fonts/remixicon.css';
 
 document.querySelector('#app').innerHTML = `
-  <div class="flex flex-col items-center justify-center p-6 space-y-10 w-full max-w-4xl mx-auto mt-10">
+  <div class="flex flex-col items-center justify-center p-2 space-y-10 w-full max-w-4xl mx-auto">
     <!-- PROFILE CNT-->
     <div class="flex flex-col items-center text-center space-y-4 w-full relative">
       
       <!-- Sampul -->
-      <div class="w-screen h-32 bg-cover bg-center rounded-xl" style="background-image: url('${sampul}');"></div>
+      <div class="w-screen h-48 bg-cover bg-center rounded-xl" style="background-image: url('${sampul}');"></div>
 
       <!-- Avatar -->
-      <div id="profil" class="avatar absolute top-20">
+      <div id="profil" class="avatar absolute top-30">
         <div class="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 avatar-online">
           <img src="${profile}" alt="Profile Picture" />
         </div>
@@ -71,5 +71,11 @@ document.querySelector('#app').innerHTML = `
     <!-- PAGE CONTENT -->
     ${pages()}
     <!-- PAGE CONTENT end-->
+
+    <footer class="w-full footer sm:footer-horizontal footer-center bg-base-100 text-base-content p-4">
+  <aside>
+    <p>Copyright © ${new Date().getFullYear()} Rizxyu - All rights reserved</p>
+  </aside>
+</footer>
   </div>
 `;
