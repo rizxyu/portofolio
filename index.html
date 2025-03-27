@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script type="module" src="/src/js/app.js"></script>
+    <title>portofolio</title>
+  </head>
+  <body>
+    <div class="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">RIZXYU</a>
+      </div>
+
+      <div class="flex-none">
+        <label class="swap swap-rotate text-lg">
+          <!-- this hidden checkbox controls the state -->
+          <input id="themeControl" type="checkbox" class="theme-controller" value="light" />
+        
+          <!-- sun icon -->
+          <i class="ri-sun-line swap-on fill-current"></i>
+         <!-- moon icon -->
+         <i class="ri-moon-fill swap-off fill-current"></i>
+        </label>
+      </div>
+    </div>
+    <div id="app"></div>
+  </body>
+</html>
