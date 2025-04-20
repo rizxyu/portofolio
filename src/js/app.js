@@ -45,19 +45,19 @@ document.querySelector('#app').innerHTML = `
 
       <!-- Sosmed -->
       <div class="flex gap-3 text-2xl">
-        <a href="https://youtube.com/@rizxyu" target="_blank" class="hover:text-red-500 transition" rel="noopener noreferrer">
+        <a href="https://youtube.com/@rizxyu" target="_blank" class="tooltip tooltip-bottom hover:text-red-500 transition" data-tip="YouTube" rel="noopener noreferrer">
           <i class="ri-youtube-fill"></i>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100064516381260" target="_blank" class="hover:text-blue-500 transition" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/profile.php?id=100064516381260" target="_blank" class="tooltip tooltip-bottom hover:text-blue-500 transition" data-tip="Facebook" rel="noopener noreferrer">
           <i class="ri-facebook-circle-fill"></i>
         </a>
-        <a href="https://www.instagram.com/kyad_ue/" target="_blank" class="hover:text-pink-500 transition" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/kyad_ue/" target="_blank" class="tooltip tooltip-bottom hover:text-pink-500 transition" data-tip="Instagram" rel="noopener noreferrer">
           <i class="ri-instagram-line"></i>
         </a>
-        <a href="https://t.me/rizxyu" target="_blank" class="hover:text-blue-400 transition" rel="noopener noreferrer">
+        <a href="https://t.me/rizxyu" target="_blank" class="tooltip tooltip-bottom hover:text-blue-400 transition" data-tip="Telegram" rel="noopener noreferrer">
           <i class="ri-telegram-fill"></i>
         </a>
-        <a href="https://github.com/rizxyu" target="_blank" class="hover:text-blue-400 transition" rel="noopener noreferrer">
+        <a href="https://github.com/rizxyu" target="_blank" class="tooltip tooltip-bottomhover:text-blue-400 transition" data-tip="Github" rel="noopener noreferrer">
           <i class="ri-github-fill"></i>
         </a>
         <a href="https://wa.me/message/XSLJWDRWSN6ZP1" target="_blank" class="flex items-center gap-1 bg-base-200 px-2 py-0.5 rounded-xl text-sm hover:bg-base-100 hover:text-green-500 transition" rel="noopener noreferrer">

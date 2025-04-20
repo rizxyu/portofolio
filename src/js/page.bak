@@ -1,9 +1,12 @@
 export default function pages() {
     return `
-    <div class="flex items-start justify-start gap-6 pl-4">
-    <button class="flex items-center gap-1"><i class="ri-git-repository-line"></i> Project</button>
-    <button class="flex items-center gap-1"><i class="ri-hammer-fill"></i> Skills</button>
-    </div>
+    <div class="flex items-start justify-start gap-6 mb-6">
+        <button class="tab-button flex items-center gap-1 font-bold text-primary" data-target="aboutme"><i class="ri-information-line"></i> About Me</button>
+        <button class="tab-button flex items-center gap-1" data-target="project"><i class="ri-git-repository-line"></i> Project</button>
+        <button class="tab-button flex items-center gap-1" data-target="skill"><i class="ri-hammer-fill"></i> Skills</button>
+        <button class="tab-button flex items-center gap-1" data-target="experience"><i class="ri-flask-fill"></i> Experience</button>
+        <button class="tab-button flex items-center gap-1" data-target="developed"><i class="ri-forbid-fill"></i> In developed</button>
+      </div>
 
     <div id="project" class="hidden">
     <ul class="list bg-base-100 rounded-box shadow-md w-full">
