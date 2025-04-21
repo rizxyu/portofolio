@@ -27,7 +27,8 @@ document.querySelector('#app').innerHTML = `
       <i class="ri-verified-badge-fill text-lg text-blue-500"></i>
       </div>
       <!-- DESCRIPTION -->
-      <p class="max-w-md mt-[-15px] text-gray-500">Im just newbie</p>
+      <p class="max-w-md mt-[-15px] text-gray-500">Saya adalah developer junior yang passionate di bidang frontend & backend development. Saat ini fokus di pengembangan tools dan automation menggunakan JavaScript & Node.js. Ngoding itu seru cik XD
+</p>
 
       <!-- Badge -->
       <div class="flex flex-wrap gap-2">
