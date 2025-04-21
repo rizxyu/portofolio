@@ -1,5 +1,5 @@
 import profile from '/profile.png';
-import sampul from '/bg.gif';
+import sampul from '/bg.jpg';
 import pages from './page.js';
 import 'remixicon/fonts/remixicon.css';
 
