@@ -33,5 +33,19 @@ export default function pj() {
               </button>
             </a>
           </li>
+          <li class="list-row flex items-center justify-between gap-4 p-4">
+            <div class="flex items-center gap-3">
+              <img class="size-10 rounded-box" src="https://mocomik.my.id/assets/logo.png"/>
+              <div>
+                <div>Mocomik</div>
+                <div class="text-xs uppercase font-semibold opacity-60">Tempat Baca Manga</div>
+              </div>
+            </div>
+            <a href="https://mocomik.my.id/" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-square btn-ghost">
+                <i class="ri-external-link-line"></i>
+              </button>
+            </a>
+          </li>
         </ul>`
 }
