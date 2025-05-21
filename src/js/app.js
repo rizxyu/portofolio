@@ -1,4 +1,4 @@
-iniimport profile from '/profile.png';
+import profile from '/profile.png';
 import sampul from '/bg.jpg';
 import pages from './page.js';
 import 'remixicon/fonts/remixicon.css';
@@ -27,7 +27,7 @@ document.querySelector('#app').innerHTML = `
       <i class="ri-verified-badge-fill text-lg text-blue-500"></i>
       </div>
       <!-- DESCRIPTION -->
-      <p class="max-w-md mt-[-15px] text-gray-500">Saya adalah developer junior yang passionate di bidang frontend & backend development. g tau mau ngasih bio aplgi
+      <p class="max-w-md mt-[-15px] text-gray-500">No bio yet.
 </p>
 
       <!-- Badge -->
