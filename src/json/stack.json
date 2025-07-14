@@ -1,0 +1,12 @@
+[
+  { "name": "HTML5", "badgeClass": "badge-warning" },
+  { "name": "Tailwind CSS", "badgeClass": "badge-info" },
+  { "name": "React", "badgeClass": "badge-primary" },
+  { "name": "Next.js", "badgeClass": "badge-ghost" },
+  { "name": "PHP", "badgeClass": "badge-secondary" },
+  { "name": "Python", "badgeClass": "badge-accent" },
+  { "name": "JavaScript", "badgeClass": "badge-warning" },
+  { "name": "TypeScript", "badgeClass": "badge-primary" },
+  { "name": "Supabase", "badgeClass": "badge-success" },
+  { "name": "SQL", "badgeClass": "badge-info" }
+]

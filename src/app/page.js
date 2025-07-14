@@ -1,103 +1,126 @@
-import Image from "next/image";
+'use client'
+
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
+import StatsDisplay from '@/components/StatsDisplay';
+import techStack from '@/json/stack.json';
+import ProjectCarousel from "@/components/ProjectCarousel";
+
+gsap.registerPlugin(TextPlugin);
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const container = useRef(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const getGreeting = () => {
+    // Jakarta is UTC+7
+    const now = new Date(new Date().getTime() + 7 * 60 * 60 * 1000);
+    const hour = now.getUTCHours();
+
+    if (hour >= 5 && hour < 12) {
+      return "Good morning!";
+    } else if (hour >= 12 && hour < 18) {
+      return "Good afternoon!";
+    } else if (hour >= 18 && hour < 22) {
+      return "Good evening!";
+    } else {
+      return "Good night!";
+    }
+  };
+
+  useGSAP(() => {
+    gsap.from(".animate-in", {
+      duration: 0.7,
+      y: 30,
+      opacity: 0,
+      stagger: 0.2,
+      ease: "power3.out"
+    });
+
+    gsap.to(".about-text", {
+        duration: 2.5,
+        text: "Hello, I'm Rizky, a junior full-stack developer.",
+        ease: "none",
+        delay: 0.8,
+    });
+
+  }, { scope: container });
+
+  return (
+    <main ref={container} className="flex flex-col items-center justify-center bg-base-200 p-4 w-full">
+      <div className="w-full max-w-4xl text-left mb-4 animate-in">
+        <p className="text-2xl font-bold [font-family:var(--font-poppins)]">{getGreeting()} Welcome!</p>
+      </div>
+      
+      <div className="w-full max-w-4xl mb-6 px-4 animate-in">
+        <div className="mb-4">
+          <div className="flex items-center gap-2">
+            <i className="ri-user-line text-xl sm:text-2xl text-primary"></i>
+            <h2 className="text-xl sm:text-2xl [font-family:var(--font-poppins)] font-bold">About Me</h2>
+          </div>
+          <hr className="w-24 h-[2px] bg-primary border-0 rounded mt-2" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        {/* Teks ini akan diisi oleh animasi GSAP */}
+        <p className="font-sans text-base-content/80 about-text min-h-[48px] sm:min-h-[24px]"></p>
+      </div>
+      
+      {/* Grid responsif untuk Tech Stack dan Project */}
+      <div className="w-full max-w-4xl mb-6 animate-in grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        {/* Card Tech Stack di kiri */}
+        <div className="order-1 md:order-1 flex flex-col gap-6 h-auto md:h-fit self-start">
+          {/* Tech Stack Card */}
+          <div className="card bg-base-100 shadow-xl flex flex-col">
+            <div className="card-body flex flex-col pb-4">
+              <div className="mb-4">
+                <div className="flex items-center gap-2">
+                  <i className="ri-code-s-slash-line text-xl sm:text-2xl text-primary"></i>
+                  <h2 className="text-xl sm:text-2xl [font-family:var(--font-poppins)] font-bold">Tech Stack</h2>
+                </div>
+                <hr className="w-32 h-[2px] bg-primary border-0 rounded mt-2" />
+              </div>
+              <div
+                className="carousel carousel-center w-full px-2 py-3 space-x-4 rounded-box overflow-x-auto cursor-grab select-none"
+                style={{ WebkitOverflowScrolling: 'touch', minHeight: '56px', maxHeight: '120px' }}
+                onMouseDown={e => {
+                  const carousel = e.currentTarget;
+                  let startX = e.pageX - carousel.offsetLeft;
+                  let scrollLeft = carousel.scrollLeft;
+                  let isDown = true;
+                  carousel.classList.add('dragging');
+                  const onMouseMove = (ev) => {
+                    if (!isDown) return;
+                    ev.preventDefault();
+                    const x = ev.pageX - carousel.offsetLeft;
+                    const walk = (x - startX) * 1.2;
+                    carousel.scrollLeft = scrollLeft - walk;
+                  };
+                  const onMouseUp = () => {
+                    isDown = false;
+                    carousel.classList.remove('dragging');
+                    window.removeEventListener('mousemove', onMouseMove);
+                    window.removeEventListener('mouseup', onMouseUp);
+                  };
+                  window.addEventListener('mousemove', onMouseMove);
+                  window.addEventListener('mouseup', onMouseUp);
+                }}
+              >
+                {techStack.map((tech) => (
+                  <div key={tech.name} className="carousel-item">
+                    <div className={`badge badge-lg badge-outline ${tech.badgeClass}`}>{tech.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* Project Carousel Card */}
+          <ProjectCarousel />
+        </div>
+        {/* StatsDisplay di grid kolom kanan */}
+        <div className="order-2 md:order-2 flex items-stretch h-full">
+          <StatsDisplay />
+        </div>
+      </div>
+    </main>
+  )
 }

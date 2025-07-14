@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Portofolio Website",
+    "desc": "Personal portfolio website built with Next.js, Tailwind CSS, and DaisyUI.",
+    "liveDemo": "https://rizxyu.biz.id/",
+    "githubRepo": "https://github.com/Rizxyu/portofolio",
+    "tag": ["nextjs", "tailwind", "daisyui", "personal"]
+  },
+  {
+    "name": "Tikdly-Python",
+    "desc": "A Python-based TikTok downloader that allows users to download TikTok videos without watermarks.",
+    "liveDemo": null,
+    "githubRepo": null,
+    "tag": ["python", "tiktok", "downloader"]
+  },
+  {
+    "name": "Huta-Tools",
+    "desc": "A website downloader that allows users to download various types of websites.",
+    "liveDemo": "https://hutatools.my.id/",
+    "githubRepo": null,
+    "tag": ["landing", "minimal", "responsive"]
+  }
+]
